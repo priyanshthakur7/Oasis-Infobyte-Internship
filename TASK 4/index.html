@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h2 class="logo"></h2>
+        <ul class="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </header>
+
+    <section class="container">
+
+        <!-- LEFT PANEL -->
+        <div class="left-box">
+            <h1>Login Authentication System</h1>
+            <p>
+                A simple, secure, and modern authentication interface built with 
+                HTML, CSS & JavaScript for the Oasis Infobyte Internship.
+            </p>
+
+            <div class="social">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+
+        <!-- RIGHT LOGIN BOX -->
+        <div class="right-box" id="loginBox">
+            <h2>Sign In</h2>
+
+            <div class="input-box">
+                <input type="email" id="loginEmail" required>
+                <label>Email</label>
+            </div>
+
+            <div class="input-box">
+                <input type="password" id="loginPassword" required>
+                <label>Password</label>
+            </div>
+
+            <div class="remember">
+                <label><input type="checkbox"> Remember me</label>
+                <span class="forgot">Forgot password?</span>
+            </div>
+
+            <button class="btn" onclick="login()">Sign In</button>
+
+            <p class="switch">Don't have an account? 
+                <span onclick="showRegister()">Sign Up</span>
+            </p>
+
+            <p id="loginMsg" class="msg"></p>
+        </div>
+
+        <!-- RIGHT REGISTER BOX -->
+        <div class="right-box hidden" id="registerBox">
+            <h2>Sign Up</h2>
+
+            <div class="input-box">
+                <input type="email" id="regEmail" required>
+                <label>Email</label>
+            </div>
+
+            <div class="input-box">
+                <input type="password" id="regPassword" required>
+                <label>Password</label>
+            </div>
+
+            <div class="input-box">
+                <input type="password" id="regPassword2" required>
+                <label>Confirm Password</label>
+            </div>
+
+            <button class="btn" onclick="register()">Register</button>
+
+            <p class="switch">Already have an account? 
+                <span onclick="showLogin()">Login</span>
+            </p>
+
+            <p id="regMsg" class="msg"></p>
+        </div>
+
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>

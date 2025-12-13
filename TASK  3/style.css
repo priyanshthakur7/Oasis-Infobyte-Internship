@@ -1,0 +1,143 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a002b, #001f3f);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+
+  
+  background: linear-gradient(90deg,#ff00ff,#00d0ff);
+  background-clip: text;             
+  -webkit-background-clip: text;     
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+}
+
+.input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.add-btn {
+  width: 50px;
+  background: linear-gradient(135deg, #ff0080, #7a00ff);
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.add-btn:hover { transform: scale(1.12); box-shadow: 0 0 15px #ff00d4; }
+
+.list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.list-box {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.list-box h2 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  color: #00f2ff;
+  letter-spacing: 1px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: rgba(255,255,255,0.09);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.4s;
+  animation: fadeIn 0.4s ease-in-out;
+}
+.task:hover { background: rgba(255,255,255,0.18); transform: scale(1.02); }
+
+.task-time {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 3px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+button.action-btn {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.complete-btn { background: #0099ff; }
+.edit-btn { background: #8e44ad; }
+.delete-btn { background: #ff0037; }
+
+.complete-btn:hover, 
+.edit-btn:hover, 
+.delete-btn:hover {
+  transform: scale(1.12);
+}
+
+
+@media(max-width:600px){
+  .wrapper{padding:20px;}
+  .title{font-size:1.6rem;}
+  .task-input{font-size:0.95rem;}
+  .add-btn{padding:10px 16px; width: auto;}
+}

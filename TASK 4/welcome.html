@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+  <h1>Dashboard</h1>
+  <p>Logged in as: <span id="displayEmail"></span></p>
+
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<script>
+if (!localStorage.getItem("auth")) {
+  window.location.href = "index.html";
+}
+
+document.getElementById("displayEmail").textContent = localStorage.getItem("email");
+
+function logout() {
+  localStorage.removeItem("auth");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

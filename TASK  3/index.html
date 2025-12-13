@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1 class="title">Daily To-Do List</h1>
+
+        <div class="input-section">
+            <input type="text" class="task-input" placeholder="✍️ Write a task...">
+            <button class="add-btn">➕</button>
+        </div>
+
+        <div class="list-section">
+
+            <div class="list-box">
+                <h2>⏳ Pending</h2>
+                <div id="pending-list"></div>
+            </div>
+
+            <div class="list-box">
+                <h2>✅ Completed</h2>
+                <div id="completed-list"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
